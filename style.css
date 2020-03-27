@@ -1,0 +1,66 @@
+/** Définition des polices personnalisées */
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('polices/Roboto-Regular-webfont.eot');
+    src: url('polices/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/Roboto-Regular-webfont.woff') format('woff'),
+         url('polices/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('polices/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('polices/Roboto-Light-webfont.eot');
+    src: url('polices/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/Roboto-Light-webfont.woff') format('woff'),
+         url('polices/Roboto-Light-webfont.ttf') format('truetype'),
+         url('polices/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('polices/Roboto-Medium-webfont.eot');
+    src: url('polices/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/Roboto-Medium-webfont.woff') format('woff'),
+         url('polices/Roboto-Medium-webfont.ttf') format('truetype'),
+         url('polices/Roboto-Medium-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('polices/Roboto-Thin-webfont.eot');
+    src: url('polices/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/Roboto-Thin-webfont.woff') format('woff'),
+         url('polices/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('polices/Roboto-Thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/** Couleurs générales du thème */
+
+:root {
+	--couleurTheme : rgb(255,183,77); /* background aside */
+	--couleurTheme2 : rgb(255,204,128); /* border-radius aside */
+}
+
+/** RESET */
+
+#block_page {
+    margin: auto;
+    padding: 0;
+    max-width: 1190px;
+    height: auto;
+    color: rgb(0,0,0);
+    background-color: rgb(255,255,255);
+	font-family: robotoregular,'Trebuchet MS', Arial, sans-serif;
+    font-weight: normal;
+}
