@@ -11,6 +11,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Archivo-Bold';
+    src:url('../polices/Archivo-Bold.ttf.woff') format('woff'),
+        url('../polices/Archivo-Bold.ttf.svg#Archivo-Bold') format('svg'),
+        url('../polices/Archivo-Bold.ttf.eot'),
+        url('../polices/Archivo-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 /** Couleurs générales du thème */
 
 :root {
@@ -27,15 +37,19 @@ html {
 #block_page {
     margin: 0;
     padding: 0;
-    width: 100%;
+    max-width: 100%;
     height: auto;
     color: rgb(0,0,0);
     background-color: rgb(255,255,255);
-	font-family: robotoregular,'Trebuchet MS', Arial, sans-serif;
+	font-family: 'Archivo-Bold','Trebuchet MS', Arial, sans-serif;
     font-weight: normal;
 }
 
 /* corps de page (main) : gallery */
+
+main {
+    width: 100%;
+}
 
 .gallery {
     display: flex;
@@ -48,7 +62,7 @@ html {
 
 .gallery li {
     list-style-type: none;
-    max-width: 36%;
+    max-width: 38.3%;
 }
 
 .gallery img {
@@ -57,18 +71,18 @@ html {
     margin-top: 95px;
 }
 
-/* à venir : <aaside */
+/* à venir : aside */
 
 .soon p {
-    max-width: 50%;
-    font-size: 5rem;
+    max-width: 45%;
+    font-size: 5.4rem;
     font-weight: bold;
     text-transform: capitalize;
     text-align: center;
     background-color: var(--couleurTheme);
     border-radius: 25px;
-    padding: 36px 0;
-    margin: 95px auto 215px auto;
+    padding: 24px 0;
+    margin: 85px auto 205px auto;
 }
 
 .soon a {
