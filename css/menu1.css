@@ -2,15 +2,28 @@
 
 @font-face {
     font-family: 'robotoregular';
-    src: url('polices/Roboto-Regular-webfont.eot');
-    src: url('polices/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('polices/Roboto-Regular-webfont.woff') format('woff'),
-         url('polices/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('polices/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    src: url('../polices/Roboto-Regular-webfont.eot');
+    src: url('../polices/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../polices/Roboto-Regular-webfont.woff') format('woff'),
+         url('../polices/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../polices/Roboto-Regular-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'curve_bold';
+    src: url('../polices/learning_curve_bold_ot_tt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'curve_regular';
+    src: url('../polices/learning_curve_regular_ot_tt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /** RESET */
 
@@ -19,7 +32,7 @@ html {
 }
 
 #block_page {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     max-width: 1500px;
     height: auto;
@@ -33,29 +46,110 @@ main {
     max-width: 1190px;
     color: rgb(61,19,25);
     background-color: rgb(252,223,219);
-    margin: 0 auto;
+    /* Centrage */
+    margin: 100 auto 0;
     text-align: center;
+    /* Ombrage */
+    box-shadow: 0 0 25px rgb(224,224,224);
 }
 
-i {
-    font-size: 10rem;
+/* Grand titre */
+
+.nom_restaurant i {
+    font-size: 13rem;
     color: rgb(240,88,97);
-    margin-top: 90px;
+    margin-top: 40px;
 }
 
-h1 {
-    text-align: center;
+.nom_restaurant h1 {
+    font-family: 'curve_bold';
+    font-weight: bold;
+    font-size: 6.2rem;
+    margin-top: 0;
 }
 
-.entree,.plats,.dessert {
+/* Sous-titres */
+
+.entree_titre,.plats_titre,.dessert_titre {
+    padding-left: 11%;
+    padding-right: 11%;
+}
+
+.entree_titre h1 {
+    font-family: 'curve_bold';
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 70px;
+}
+
+.plats_titre h1 {
+    font-family: 'curve_bold';
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 100px;
+}
+
+.dessert_titre h1 {
+    font-family: 'curve_bold';
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 87px;
+}
+
+/*  Spécialités au choix et prix */
+
+.entree_choix ul ,.plats_choix ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    font-family: 'curve_regular';
+    font-size: 2.9rem;
 }
 
-li {
+.dessert_choix {
+    font-family: 'curve_regular';
+    font-size: 2.8rem;
+    text-align: left;
+}
+
+/* Formatage du flex */
+
+ul, li, p {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 20px;
+}
+
+/* Prix */
+
+.prix {
+    font-family: 'curve_bold';
+    font-weight: bold;
+}
+
+/* Footer */
+
+main footer p {
+    position: relative;
+    font-family: 'curve_bold';
+    font-size: 4.8rem;
+    font-weight: bold;
+    padding-top: 90px;
+    padding-bottom: 100px;
+    margin-bottom: 200px;
+}
+
+footer i {
+    position: absolute;
+    top: 80px;
+    left: 320px;
+    font-size: 8rem;
+    color: rgb(240,88,97);
 }
 
 /** Media queries */

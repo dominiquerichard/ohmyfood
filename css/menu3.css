@@ -2,15 +2,28 @@
 
 @font-face {
     font-family: 'robotoregular';
-    src: url('polices/Roboto-Regular-webfont.eot');
-    src: url('polices/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('polices/Roboto-Regular-webfont.woff') format('woff'),
-         url('polices/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('polices/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    src: url('../polices/Roboto-Regular-webfont.eot');
+    src: url('../polices/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../polices/Roboto-Regular-webfont.woff') format('woff'),
+         url('../polices/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../polices/Roboto-Regular-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'curve_bold';
+    src: url('../polices/learning_curve_bold_ot_tt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'curve_regular';
+    src: url('../polices/learning_curve_regular_ot_tt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /** RESET */
 
@@ -19,36 +32,120 @@ html {
 }
 
 #block_page {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     max-width: 1500px;
     height: auto;
     color: rgb(0,0,0);
     background-color: rgb(255,255,255);
-	font-family: robotoregular,'Trebuchet MS', Arial, sans-serif;
+    font-family: robotoregular,'Trebuchet MS', Arial, sans-serif;
     font-weight: normal;
 }
 
 main {
     max-width: 1190px;
-    background-color: rgb(252,223,219);
-    margin: 10px auto;
-}
-
-h1 {
+    color: rgb(0,0,0);
+    background-color: rgb(237,239,239);
+    /* Centrage */
+    margin: 100 auto 0;
     text-align: center;
+    /* Ombrage */
+    box-shadow: 0 0 25px rgb(224,224,224);
 }
 
-.entree,.plats,.dessert {
+main header > h1 {
+    padding-top: 175px;
+}
+
+/* Grand titre */
+
+.nom_restaurant h1 {
+    font-family: 'curve_bold';
+    font-size: 6.2rem;
+    color: rgb(2,49,223);
+    margin-top: 0;
+}
+
+/* Sous-titres */
+
+.entree_titre,.plats_titre,.dessert_titre {
+    padding-left: 11%;
+    padding-right: 11%;
+}
+
+.entree_titre {
+    color: rgb(0,0,0);
+}
+
+.plats_titre {
+    color: rgb(0,0,0);
+}
+
+.dessert_titre {
+    color: rgb(0,0,0);
+}
+
+.entree_titre h1 {
+    font-family: 'curve_bold';
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 150px;
+}
+
+.plats_titre h1 {
+    font-family: 'curve_bold';
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 100px;
+}
+
+.dessert_titre h1 {
+    font-family: 'curve_bold';
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 87px;
+}
+
+/*  Spécialités au choix et prix */
+
+.entree_choix ul ,.plats_choix ul, .dessert_choix ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+     font-family: 'curve_regular';
+    font-size: 2.9rem;
 }
 
-li {
+/* Formatage du flex */
+
+ul, li, p {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
+section ul li {
+    margin-bottom: 20px;
+}
+
+/* Prix */
+
+.prix {
+    font-family: 'curve_bold';
+    font-weight: bold;
+}
+
+/* Bas de page */
+
+.main_page {
+    margin-bottom: 200px;
+}
+
+.bas_de_page {
+    padding-bottom: 250px;
+}
+
 
 /** Media queries */
 /** Tablette */
@@ -64,7 +161,5 @@ li {
 @media (max-width: 700px) {
 
 /* Main mobile */
-
-
 
 }

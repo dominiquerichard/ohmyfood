@@ -11,38 +11,11 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Archivo-Bold';
-    src:url('../polices/Archivo-Bold.ttf.woff') format('woff'),
-        url('../polices/Archivo-Bold.ttf.svg#Archivo-Bold') format('svg'),
-        url('../polices/Archivo-Bold.ttf.eot'),
-        url('../polices/Archivo-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-
 /** Couleurs générales du thème */
 
 :root {
 	--couleurTheme : rgb(87,156,135); /* background-color header and footer */
 	--couleurTheme2 : rgb(253,203,70); /* police header and footer */
-}
-
-/** RESET */
-
-html {
-    font-size: 62.5%;
-}
-
-#block_page {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    height: auto;
-    color: rgb(0,0,0);
-    background-color: rgb(255,255,255);
-	font-family: 'Archivo-Bold','Trebuchet MS', Arial, sans-serif;
-    font-weight: normal;
 }
 
 /* corps de page (main) : gallery */

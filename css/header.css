@@ -16,16 +16,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Archivo-Bold';
-    src:url('../polices/Archivo-Bold.ttf.woff') format('woff'),
-        url('../polices/Archivo-Bold.ttf.svg#Archivo-Bold') format('svg'),
-        url('../polices/Archivo-Bold.ttf.eot'),
-        url('../polices/Archivo-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* RESET*/
 
 html {
@@ -33,26 +23,25 @@ html {
 }
 
 #block_page {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     max-width: 1500px;
     height: auto;
     color: rgb(0,0,0);
     background-color: rgb(255,255,255);
-    font-family: 'Archivo-Bold','Trebuchet MS', Arial, sans-serif;
+    font-family: 'robotoregular','Trebuchet MS', Arial, sans-serif;
     font-weight: normal;
 }
 
 /* haut de page : header logo*/
 
 .logo {
-    font-family: 'Archivo-Bold';
+    font-family: 'robotoregular';
     font-size: 10rem;
     color: var(--couleurTheme2);
     font-weight: bold;
     background-color: var(--couleurTheme);
     text-align: center;
-    width: 100%;
     height: 80px;
     padding-top: 65px;
     padding-bottom: 100px;
@@ -70,12 +59,13 @@ html {
 footer ul {
     position: fixed;
     bottom: 0;
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
     padding: 35px 0 37px 0;
     background-color: var(--couleurTheme);
     border-top: 2px solid rgb(161,193,129);
