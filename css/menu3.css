@@ -1,26 +1,17 @@
-/** Définition des polices personnalisées */
+/* Menu 3 = "Le délice des papilles */
+
+/* Police personnalisée */
 
 @font-face {
-    font-family: 'robotoregular';
-    src: url('../polices/Roboto-Regular-webfont.eot');
-    src: url('../polices/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../polices/Roboto-Regular-webfont.woff') format('woff'),
-         url('../polices/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('../polices/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-family: 'dancing';
+    src: url('../polices/dancing-script.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'curve_bold';
-    src: url('../polices/learning_curve_bold_ot_tt.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'curve_regular';
-    src: url('../polices/learning_curve_regular_ot_tt.ttf') format('truetype');
+    font-family: 'worstveldsling';
+    src: url('../polices/worstveldsling.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -54,16 +45,19 @@ main {
 }
 
 main header > h1 {
-    padding-top: 175px;
+    padding-top: 160px;
 }
 
 /* Grand titre */
 
 .nom_restaurant h1 {
-    font-family: 'curve_bold';
-    font-size: 6.2rem;
-    color: rgb(2,49,223);
-    margin-top: 0;
+    font-family: 'dancing';
+    font-size: 10rem;
+    font-weight: normal;
+    background-image: linear-gradient(135deg, rgb(0,34,219), rgb(8,137,251));
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent;
 }
 
 /* Sous-titres */
@@ -85,25 +79,41 @@ main header > h1 {
     color: rgb(0,0,0);
 }
 
-.entree_titre h1 {
-    font-family: 'curve_bold';
+.entree_titre h1, .plats_titre h1, .dessert_titre h1 {
+    position: relative;
+    font-family: 'worstveldsling';
     font-weight: bold;
-    font-size: 4rem;
-    margin-top: 150px;
+    font-size: 5rem;
+}
+
+.entree_titre h1 {
+    margin-top: 130px;
 }
 
 .plats_titre h1 {
-    font-family: 'curve_bold';
-    font-weight: bold;
-    font-size: 4rem;
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .dessert_titre h1 {
-    font-family: 'curve_bold';
-    font-weight: bold;
-    font-size: 4rem;
-    margin-top: 87px;
+    margin-top: 35px;
+}
+
+.entree_titre h1::before, .plats_titre h1::before, .dessert_titre h1::before {
+    content: url(../images/trait-3.png);
+    position: absolute;
+    top: 5px;
+    left: -10%;
+}
+
+.entree_titre h1::after, .plats_titre h1::after, .dessert_titre h1::after {
+    content: url(../images/trait-3.png);
+    position: absolute;
+    top: 5px;
+    right: -10%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 /*  Spécialités au choix et prix */
@@ -113,8 +123,9 @@ main header > h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-     font-family: 'curve_regular';
-    font-size: 2.9rem;
+     font-family: 'worstveldsling';
+    font-size: 4rem;
+    font-weight: bold;
 }
 
 /* Formatage du flex */
@@ -125,15 +136,16 @@ ul, li, p {
     padding: 0;
 }
 
-section ul li {
-    margin-bottom: 20px;
+section ul li { /*réglage de l'interligne*/
+    margin-bottom: 10px;
 }
 
 /* Prix */
 
 .prix {
-    font-family: 'curve_bold';
+    font-family: 'worstveldsling';
     font-weight: bold;
+    font-size: 4.1rem;
 }
 
 /* Bas de page */
@@ -143,7 +155,7 @@ section ul li {
 }
 
 .bas_de_page {
-    padding-bottom: 250px;
+    padding-bottom: 300px;
 }
 
 

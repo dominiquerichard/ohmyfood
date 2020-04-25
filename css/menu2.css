@@ -1,26 +1,17 @@
-/** Définition des polices personnalisées */
+/* Menu 2 = "Le chic à la française" */
+
+/* Police personnalisée */
 
 @font-face {
-    font-family: 'robotoregular';
-    src: url('../polices/Roboto-Regular-webfont.eot');
-    src: url('../polices/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../polices/Roboto-Regular-webfont.woff') format('woff'),
-         url('../polices/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('../polices/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-family: 'croissantone';
+    src: url('../polices/croissantone-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'curve_bold';
-    src: url('../polices/learning_curve_bold_ot_tt.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'curve_regular';
-    src: url('../polices/learning_curve_regular_ot_tt.ttf') format('truetype');
+    font-family: 'kameron';
+    src: url('../polices/kameron-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -53,16 +44,17 @@ main {
     box-shadow: 0 0 25px rgb(224,224,224);
 }
 
-main header > h1 {
-    padding-top: 175px;
-}
-
 /* Grand titre */
 
 .nom_restaurant h1 {
-    font-family: 'curve_bold';
-    font-size: 6.2rem;
-    margin-top: 0;
+    font-family: 'croissantone';
+    font-size: 6rem;
+    padding-top: 175px;
+    font-weight: normal;
+    background-image: linear-gradient(to right, #df871e, #8f5bfe);
+    background-clip: text;
+     -webkit-background-clip: text; 
+    color: transparent;
 }
 
 /* Sous-titres */
@@ -84,42 +76,55 @@ main header > h1 {
     color: rgb(110,76,204);
 }
 
-.entree_titre h1 {
-    font-family: 'curve_bold';
+.entree_titre h1, .plats_titre h1, .dessert_titre h1 {
+    position: relative;
+    font-family: 'kameron';
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3.2rem;
     margin-top: 150px;
 }
 
+.entree_titre h1 {
+    margin: 155px 0 55px;
+}
+
 .plats_titre h1 {
-    font-family: 'curve_bold';
-    font-weight: bold;
-    font-size: 4rem;
-    margin-top: 100px;
+    margin: 100px 0 55px;
 }
 
 .dessert_titre h1 {
-    font-family: 'curve_bold';
-    font-weight: bold;
-    font-size: 4rem;
-    margin-top: 87px;
+    margin: 87px 0 55px;
 }
+
+.entree_titre h1::before, .plats_titre h1::before, .dessert_titre h1::before {
+    content: url(../images/trait-2.png);
+    position: absolute;
+    top: 5px;
+    left: -10%;
+}
+
+.entree_titre h1::after, .plats_titre h1::after, .dessert_titre h1::after {
+    content: url(../images/trait-2.png);
+    position: absolute;
+    top: 5px;
+    right: -10%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 
 /*  Spécialités au choix et prix */
 
-.entree_choix ul ,.plats_choix ul {
+.entree_choix ul ,.plats_choix ul, .dessert_choix ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-family: 'curve_regular';
+    font-family: 'kameron';
     font-size: 2.9rem;
-}
-
-.dessert_choix {
-    font-family: 'curve_regular';
-    font-size: 2.9rem;
-    text-align: left;
+    font-weight: normal;
 }
 
 /* Formatage du flex */
@@ -131,20 +136,21 @@ ul, li, p {
 }
 
 section ul li {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 /* Prix */
 
 .prix {
-    font-family: 'curve_bold';
-    font-weight: bold;
+    font-family: 'kameron';
+    font-weight: normal;
+    font-size: 3.3rem;
 }
 
 /* Bas de page */
 
 .bas_de_page {
-    padding-bottom: 100px;
+    padding-bottom: 250px;
     margin-bottom: 200px;
 }
 
