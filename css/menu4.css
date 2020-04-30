@@ -1,38 +1,5 @@
  /* Menu 4 = "La palette du goût */
  
-/* Police personnalisée */
-
-@font-face {
-    font-family: 'kaushanscript';
-    src: url('../polices/kaushanscript-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'typo_comics';
-    src: url('../polices/typo_comics_light.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/** RESET */
-
-html {
-    font-size: 62.5%;
-}
-
-#block_page {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1500px;
-    height: auto;
-    color: rgb(0,0,0);
-    background-color: rgb(255,255,255);
-    font-family: robotoregular,'Trebuchet MS', Arial, sans-serif;
-    font-weight: normal;
-}
-
 main {
     max-width: 1190px;
     color: rgb(0,0,0);
@@ -41,7 +8,7 @@ main {
     margin: 100 auto 0;
     text-align: center;
     /* Ombrage */
-    box-shadow: 0 0 25px rgb(224,224,224);
+    box-shadow: 0 0 25px 5px rgb(224,224,224);
 }
 
 main header > h1 {

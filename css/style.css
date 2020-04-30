@@ -1,8 +1,5 @@
+/* Page d'accueil */
 /* corps de page (main) : gallery */
-
-main {
-    width: 100%;
-}
 
 .gallery {
     display: flex;
@@ -15,27 +12,150 @@ main {
 
 .gallery li {
     list-style-type: none;
-    max-width: 38.3%;
+    width: 38.3%;
+    text-align: center;
+    margin: 100px auto 0;
+    box-shadow: 0 0 25px  5px rgb(224,224,224);
 }
 
-.gallery img {
-    max-width: 100%;
-    box-shadow: 0 0 25px rgb(224,224,224);
-    margin-top: 95px;
+.gallery a {
+    text-decoration: none;
+}
+
+.gallery a div {
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.gallery a:hover div {
+    -moz-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    transform: scale(1.25);
+    opacity: 0.5;
+}
+
+#menu1 {
+    background-color: rgb(252,223,219);
+}
+
+#menu1 h1 {
+    font-family: 'devonshire';
+    font-weight: normal;
+    font-size: 5rem;
+    color: rgb(61,19,25);
+    line-height: 6rem;
+    margin: 0;
+}
+
+#menu1 i {
+    font-size: 8rem;
+    color: rgb(240,88,97);
+    margin-top: 255px;
+}
+
+#menu1 h2 {
+    text-transform: uppercase;
+    font-family: 'KGPrimary';
+    font-weight: normal;
+    font-size: 7.5rem;
+    color: rgb(61,19,25);
+    margin-top: 40px;
+    padding-bottom: 190px;
+}
+
+#menu2 {
+    background-color: rgb(255,245,254);
+}
+
+#menu2 h1 {
+    font-family: 'croissantone';
+    font-weight: normal;
+    font-size: 3.5rem;
+    background-image: linear-gradient(to right, #df871e, #8f5bfe);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent;
+    margin: 300px 0 0;
+}
+
+#menu2 h2 {
+    text-transform: capitalize;
+    font-family: 'kameron';
+    font-weight: bold;
+    font-size: 7rem;
+    color: rgb(198,116,18);
+    margin-top: 30px;
+    padding-bottom: 190px;
+}
+
+#menu3 {
+    background-color: rgb(237,239,239);
+}
+
+#menu3 h1 {
+    font-family: 'dancing';
+    font-weight: normal;
+    font-size: 5.5rem;
+    background-image: linear-gradient(135deg, rgb(0,34,219), rgb(8,137,251));
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent;
+    margin: 270px 0 0;
+}
+
+#menu3 h2 {
+    text-transform: capitalize;
+    font-family: 'worstveldsling';
+    font-weight: bold;
+    font-size: 8rem;
+    color: rgb(8,137,251);
+    margin-top: 50px;
+    padding-bottom: 210px;
+}
+
+#menu4 {
+    background-color: rgb(253,255,253);
+}
+
+#menu4 h1 {
+    font-family: 'kaushanscript';
+    font-size: 5rem;
+    font-weight: normal;
+    background-image: linear-gradient(135deg, rgb(61,146,58), rgb(190,255,127));
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent;
+    margin: 290px 0 0;
+}
+
+#menu4 h2 {
+    text-transform: capitalize;
+    font-family: 'typo_comics';
+    font-weight: normal;
+    font-size: 5.5rem;
+    color: rgb(61,146,58);
+    margin-top: 35px;
+    padding-bottom: 210px;
 }
 
 /* à venir : aside */
 
 .soon p {
     max-width: 45%;
-    font-size: 5.4rem;
-    font-weight: bold;
+    font-family: 'montserrat';
+    font-size: 5.5rem;
+    font-weight: normal;
     text-transform: capitalize;
     text-align: center;
     background-color: var(--couleurTheme);
     border-radius: 25px;
-    padding: 24px 0;
-    margin: 85px auto 205px auto;
+    padding: 25px 0;
+    margin: 95px auto 223px;
 }
 
 .soon a {

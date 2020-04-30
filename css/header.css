@@ -5,13 +5,76 @@
 	--couleurTheme2 : rgb(253,203,70); /* police header and footer */
 }
 
-@font-face {
+@font-face { /* police header */
     font-family: 'robotoregular';
     src: url('../polices/Roboto-Regular-webfont.eot');
     src: url('../polices/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../polices/Roboto-Regular-webfont.woff') format('woff'),
          url('../polices/Roboto-Regular-webfont.ttf') format('truetype'),
          url('../polices/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* police footer */
+    font-family: 'montserrat';
+    src: url('../polices/montserrat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* police menu 1*/
+    font-family: 'devonshire';
+    src: url('../polices/devonshire-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* police menu 1*/
+    font-family: 'KGPrimary';
+    src: url('../polices/KGPrimaryItalics.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* police menu 2*/
+    font-family: 'croissantone';
+    src: url('../polices/croissantone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* police menu 2*/
+    font-family: 'kameron';
+    src: url('../polices/kameron-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* police menu 3*/
+    font-family: 'dancing';
+    src: url('../polices/dancing-script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* police menu 3*/
+    font-family: 'worstveldsling';
+    src: url('../polices/worstveldsling.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* police menu 4*/
+    font-family: 'kaushanscript';
+    src: url('../polices/kaushanscript-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* police menu 34*/
+    font-family: 'typo_comics';
+    src: url('../polices/typo_comics_light.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -43,8 +106,7 @@ html {
     background-color: var(--couleurTheme);
     text-align: center;
     height: 80px;
-    padding-top: 65px;
-    padding-bottom: 100px;
+    padding: 55px 0 110px;
     margin: 0;
     border-bottom: 2px solid rgb(161,193,129);
 }
@@ -66,7 +128,7 @@ footer ul {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 35px 0 37px 0;
+    padding: 38px 0 40px 0;
     background-color: var(--couleurTheme);
     border-top: 2px solid rgb(161,193,129);
 }
@@ -76,11 +138,11 @@ footer li {
 }
 
 footer a {
+    font-family: 'montserrat';
     text-decoration: none;
     color: var(--couleurTheme2);
-    font-size: 4.5rem;
-    font-weight: bold;
-    text-transform: capitalize;
+    font-size: 4.7rem;
+    font-weight: normal;
     padding: 30px 40px;
 }
 /** Media queries */

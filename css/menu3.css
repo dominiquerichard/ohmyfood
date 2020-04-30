@@ -1,38 +1,5 @@
 /* Menu 3 = "Le délice des papilles */
 
-/* Police personnalisée */
-
-@font-face {
-    font-family: 'dancing';
-    src: url('../polices/dancing-script.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'worstveldsling';
-    src: url('../polices/worstveldsling.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/** RESET */
-
-html {
-    font-size: 62.5%;
-}
-
-#block_page {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1500px;
-    height: auto;
-    color: rgb(0,0,0);
-    background-color: rgb(255,255,255);
-    font-family: robotoregular,'Trebuchet MS', Arial, sans-serif;
-    font-weight: normal;
-}
-
 main {
     max-width: 1190px;
     color: rgb(0,0,0);
@@ -41,7 +8,7 @@ main {
     margin: 100 auto 0;
     text-align: center;
     /* Ombrage */
-    box-shadow: 0 0 25px rgb(224,224,224);
+    box-shadow: 0 0 25px 5px rgb(224,224,224);
 }
 
 main header > h1 {
@@ -98,18 +65,60 @@ main header > h1 {
     margin-top: 35px;
 }
 
-.entree_titre h1::before, .plats_titre h1::before, .dessert_titre h1::before {
+.entree_titre h1::before {
     content: url(../images/trait-3.png);
     position: absolute;
     top: 5px;
     left: -10%;
+    background-color: rgb(2,40,221);
 }
 
-.entree_titre h1::after, .plats_titre h1::after, .dessert_titre h1::after {
+.plats_titre h1::before {
+    content: url(../images/trait-3.png);
+    position: absolute;
+    top: 5px;
+    left: -10%;
+    background-color: rgb(6,112,243);
+}
+
+.dessert_titre h1::before {
+    content: url(../images/trait-3.png);
+    position: absolute;
+    top: 5px;
+    left: -10%;
+    background-color: rgb(34,157,249);
+}
+
+.entree_titre h1::after {
     content: url(../images/trait-3.png);
     position: absolute;
     top: 5px;
     right: -10%;
+    background-color: rgb(2,40,221);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.plats_titre h1::after {
+    content: url(../images/trait-3.png);
+    position: absolute;
+    top: 5px;
+    right: -10%;
+    background-color: rgb(6,112,243);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.dessert_titre h1::after {
+    content: url(../images/trait-3.png);
+    position: absolute;
+    top: 5px;
+    right: -10%;
+    background-color: rgb(34,157,249);
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
