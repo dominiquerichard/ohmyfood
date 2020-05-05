@@ -72,7 +72,7 @@
     font-style: normal;
 }
 
-@font-face { /* police menu 34*/
+@font-face { /* police menu 4*/
     font-family: 'typo_comics';
     src: url('../polices/typo_comics_light.otf') format('truetype');
     font-weight: normal;
@@ -105,8 +105,7 @@ html {
     font-weight: bold;
     background-color: var(--couleurTheme);
     text-align: center;
-    height: 80px;
-    padding: 55px 0 110px;
+    padding: 50px 0 58px;
     margin: 0;
     border-bottom: 2px solid rgb(161,193,129);
 }
@@ -122,8 +121,6 @@ footer ul {
     position: fixed;
     bottom: 0;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     max-width: 1500px;
@@ -151,6 +148,23 @@ footer a {
 @media (max-width: 1024px) {
 
     /* Main Tablette */
+    /* haut de page : header logo*/
+
+    .logo {
+        font-size: 6em;
+        height: 60px;
+        padding: 40px 100px;
+    }
+
+    /* bas de page : Footer */
+
+    footer ul {
+       padding: 28px 0 30px 0;
+    }
+
+    footer a {
+        font-size: 3em;
+    }
 
 }
 
@@ -158,8 +172,29 @@ footer a {
 
 @media (max-width: 700px) {
 
-/* Main mobile */
+    /* Main mobile */
 
+    .logo {
+        font-size: 4.5em;
+        height: 50px;
+        padding: 30px 90px;
+    }
 
+    /* bas de page : Footer */
+
+    footer ul {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer ul li {
+        padding-bottom: 15px;
+    }
+
+    footer a {
+        font-size: 2.5em;
+    }
 
 }

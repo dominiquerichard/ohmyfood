@@ -5,32 +5,39 @@ main {
     color: rgb(0,0,0);
     background-color: rgb(253,255,253);
     /* Centrage */
-    margin: 100 auto 0;
+    margin: 0 auto 0;
     text-align: center;
     /* Ombrage */
     box-shadow: 0 0 25px 5px rgb(224,224,224);
 }
 
-main header > h1 {
-    padding-top: 150px;
-}
-
 /* Grand titre */
 
 .nom_restaurant h1 {
+    font-family: 'robotoregular';
+    font-size: 5.6rem;
+    font-weight: bold;
+    color: rgb(53,53,53);
+    background-color: rgb(255,255,255);
+    text-align: center;
+    margin: 80px 0 40px;
+}
+
+.nom_restaurant h2 {
     font-family: 'kaushanscript';
     font-size: 10rem;
     background-image: linear-gradient(135deg, rgb(61,146,58), rgb(190,255,127));
     background-clip: text;
     -webkit-background-clip: text; 
     color: transparent;
+    padding-top: 150px;
+    margin-top: 40px;
 }
 
 /* Sous-titres */
 
 .entree_titre,.plats_titre,.dessert_titre {
-    padding-left: 11%;
-    padding-right: 11%;
+    padding: 0 3%;
 }
 
 .entree_titre {
@@ -46,36 +53,50 @@ main header > h1 {
 }
 
 .entree_titre h1, .plats_titre h1, .dessert_titre h1 {
-    position: relative;
     font-family: 'typo_comics';
     font-weight: normal;
     font-size: 3.2rem;
 }
 
 .entree_titre h1 {
-    margin: 130px 0 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 125px 0 50px;
 }
 
 .plats_titre h1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin: 60px 0 50px;
 }
 
 .dessert_titre h1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin: 50px 0 50px;
 }
 
 .entree_titre h1::before, .plats_titre h1::before, .dessert_titre h1::before {
-    content: url(../images/trait-4.png);
-    position: absolute;
-    top: 5px;
-    left: -10%;
+    content: "";
+    display: inline-block;
+    width: 408px;
+    height: 34px;
+    background-image: url(../images/trait-4.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .entree_titre h1::after, .plats_titre h1::after, .dessert_titre h1::after {
-    content: url(../images/trait-4.png);
-    position: absolute;
-    top: 5px;
-    right: -10%;
+    content: "";
+    display: inline-block;
+    width: 408px;
+    height: 34px;
+    background-image: url(../images/trait-4.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -86,43 +107,50 @@ main header > h1 {
 
 .entree_choix ul ,.plats_choix ul, .dessert_choix ul {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-     font-family: 'typo_comics';
-    font-size: 2.9rem;
+    align-items: center;
+    font-family: 'typo_comics';
+    font-size: 2.8rem;
+    padding: 0 10% 0 10%;
 }
+
 
 /* Formatage du flex */
 
 ul, li, p {
     list-style-type: none;
     margin: 0;
-    padding: 0;
 }
 
 section ul li { /*réglage de l'interligne*/
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+}
+
+section ul > li {
+    text-align: left;
+    flex-basis: 87.5%;
 }
 
 /* Prix */
 
 .prix {
+    flex-basis: 12.5%;
     font-family: 'typo_comics';
     font-weight: normal;
     font-size: 3.1rem;
 }
 
+.prix p {
+    margin-left: 15px;
+}
+
 /* Bas de page */
 
 .main_page {
-    margin-bottom: 200px;
-}
-
-.bas_de_page {
     padding-bottom: 300px;
+    margin-bottom: 270px;
 }
-
 
 /** Media queries */
 /** Tablette */

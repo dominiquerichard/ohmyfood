@@ -6,7 +6,8 @@ main {
     color: rgb(61,19,25);
     background-color: rgb(252,223,219);
     /* Centrage */
-    margin: 100 auto 0;
+    margin: 0 auto 0;
+    padding: 0;
     text-align: center;
     /* Ombrage */
     box-shadow: 0 0 25px 5px rgb(224,224,224);
@@ -14,13 +15,23 @@ main {
 
 /* Grand titre */
 
+.nom_restaurant h1 {
+	font-family: 'robotoregular';
+	font-size: 5.6rem;
+	font-weight: bold;
+	color: rgb(53,53,53);
+	background-color: rgb(255,255,255);
+	text-align: center;
+	margin: 80px 0 40px;
+}
+
 .nom_restaurant i {
     font-size: 12.5rem;
     color: rgb(240,88,97);
-    margin-top: 80px;
+    padding-top: 80px;
 }
 
-.nom_restaurant h1 {
+.nom_restaurant h2 {
     font-family: 'devonshire';
     font-weight: normal;
     font-size: 7.5rem;
@@ -30,41 +41,54 @@ main {
 /* Sous-titres */
 
 .entree_titre,.plats_titre,.dessert_titre {
-    padding-left: 11%;
-    padding-right: 11%;
+    padding: 0 10%;
 }
 
 .entree_titre h1, .plats_titre h1, .dessert_titre h1 {
-    position: relative;
     font-family: 'KGPrimary';
     font-weight: bold;
     font-size: 5rem;
 }
 
 .entree_titre h1 {
-    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0 35px;
 }
 
 .plats_titre h1 {
-    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 55px 0 35px;
 }
 
 .dessert_titre h1 {
-    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 85px 0 35px;
 }
 
 .entree_titre h1::before, .plats_titre h1::before, .dessert_titre h1::before {
-    content: url(../images/trait-1.png);
-    position: absolute;
-    top: 15px;
-    left: 0;
+    content: "";
+    display: inline-block;
+    width: 297px;
+    height: 18px;
+    background-image: url(../images/trait-1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .entree_titre h1::after, .plats_titre h1::after, .dessert_titre h1::after {
-    content: url(../images/trait-1.png);
-    position: absolute;
-    top: 15px;
-    right: 0;
+    content: "";
+    display: inline-block;
+    width: 297px;
+    height: 18px;
+    background-image: url(../images/trait-1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -75,12 +99,13 @@ main {
 
 .entree_choix ul ,.plats_choix ul, .dessert_choix ul {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     font-family: 'KGPrimary';
     font-weight: normal;
-    font-size: 3.5rem;
+    font-size: 3.3rem;
+    padding: 0 0% 0 0%;
 }
 
 /* Formatage du flex */
@@ -95,31 +120,52 @@ section ul li { /*réglage de l'interligne*/
     margin-bottom: 28px;
 }
 
+section ul > li {
+    text-align: left;
+    flex-basis: 90%;
+}
+
+
 /* Prix */
 
 .prix {
+    flex-basis: 10%;
 	font-family: KGPrimary;
+    text-align: right;
     font-weight: bold;
     font-size: 3rem;
 }
 
+.prix p {
+    margin-left: 15px;
+}
+
 /* Footer */
 
-main footer p {
-    position: relative;
-    font-family: 'devonshire';
-    font-size: 5.2rem;
-    font-weight: bold;
-    padding: 80px 0 100px;
-    margin-bottom: 200px;
+main footer {
+    display: inline-flex;
+    justify-content: center;
+    padding: 80px 0 80px;
 }
 
 footer i {
-    position: absolute;
-    top: 80px;
-    left: 380px;
     font-size: 7.5rem;
     color: rgb(240,88,97);
+    padding: 0 20px 0 0;
+}
+
+main footer p {
+    font-family: 'devonshire';
+    font-size: 5.4rem;
+    font-weight: normal;
+    margin: 0 auto;
+}
+
+/* Bas de page */
+
+.main_page {
+    padding-bottom: 20px;
+    margin-bottom: 270px;
 }
 
 /** Media queries */

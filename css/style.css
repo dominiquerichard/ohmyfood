@@ -1,9 +1,14 @@
 /* Page d'accueil */
-/* corps de page (main) : gallery */
+/* corps de page (main) */
+
+main {
+    padding: 0 7%;
+}
+
+/* Gallery : flex */
 
 .gallery {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0;
@@ -12,9 +17,10 @@
 
 .gallery li {
     list-style-type: none;
-    width: 38.3%;
+    max-width: 540px;
+    width: 100%;
     text-align: center;
-    margin: 100px auto 0;
+    margin: 100px 10px 0;
     box-shadow: 0 0 25px  5px rgb(224,224,224);
 }
 
@@ -39,8 +45,16 @@
     opacity: 0.5;
 }
 
+/* Menu 1 ************/
+
 #menu1 {
     background-color: rgb(252,223,219);
+}
+
+#menu1 i {
+    font-size: 8rem;
+    color: rgb(240,88,97);
+    margin-top: 255px;
 }
 
 #menu1 h1 {
@@ -52,12 +66,6 @@
     margin: 0;
 }
 
-#menu1 i {
-    font-size: 8rem;
-    color: rgb(240,88,97);
-    margin-top: 255px;
-}
-
 #menu1 h2 {
     text-transform: uppercase;
     font-family: 'KGPrimary';
@@ -67,6 +75,8 @@
     margin-top: 40px;
     padding-bottom: 190px;
 }
+
+/* Menu 2 ************/
 
 #menu2 {
     background-color: rgb(255,245,254);
@@ -93,6 +103,8 @@
     padding-bottom: 190px;
 }
 
+/* Menu 3 ************/
+
 #menu3 {
     background-color: rgb(237,239,239);
 }
@@ -101,11 +113,11 @@
     font-family: 'dancing';
     font-weight: normal;
     font-size: 5.5rem;
-    background-image: linear-gradient(135deg, rgb(0,34,219), rgb(8,137,251));
+    background-image: linear-gradient(135deg, rgb(0,34,219), rgb(0,34,219), rgb(8,137,251), rgb(8,137,251));
     background-clip: text;
     -webkit-background-clip: text; 
     color: transparent;
-    margin: 270px 0 0;
+    padding: 270px 0 0;
 }
 
 #menu3 h2 {
@@ -117,6 +129,8 @@
     margin-top: 50px;
     padding-bottom: 210px;
 }
+
+/* Menu 4 ************/
 
 #menu4 {
     background-color: rgb(253,255,253);
@@ -130,7 +144,7 @@
     background-clip: text;
     -webkit-background-clip: text; 
     color: transparent;
-    margin: 290px 0 0;
+    padding: 290px 0 0;
 }
 
 #menu4 h2 {
@@ -146,7 +160,8 @@
 /* à venir : aside */
 
 .soon p {
-    max-width: 45%;
+    max-width: 655px;
+    width: 100%;
     font-family: 'montserrat';
     font-size: 5.5rem;
     font-weight: normal;
@@ -170,6 +185,72 @@
 
     /* Main Tablette */
 
+    /* Gallery */
+
+    .gallery li {
+        width: 40%;
+    }
+
+    /* Menu 1 ************/
+
+    #menu1 h1 {
+        font-size: 2rem;
+    }
+
+    #menu1 i {
+        font-size: 3.2rem;
+        padding-top: 155px;
+    }
+
+    #menu1 h2 {
+        font-size: 3rem;
+        padding-bottom: 170px;
+    }
+
+    /* Menu 2 ************/
+
+    #menu2 h1 {
+        font-size: 1.4rem;
+        margin: 200px 0 0;
+    }
+
+    #menu2 h2 {
+        font-size: 2.8rem;
+        padding-bottom: 170px;
+    }
+
+    /* Menu 3 ************/
+
+    #menu3 h1 {
+        font-size: 2.2rem;
+        padding: 165px 0 0;
+
+    }
+
+    #menu3 h2 {
+        font-size: 3.2rem;
+        padding-bottom: 190px;
+    }
+
+    /* Menu 4 ************/
+
+    #menu4 h1 {
+        font-size: 2rem;
+        padding: 175px 0 0;
+    }
+
+    #menu4 h2 {
+        font-size: 2.2rem;
+        padding-bottom: 180px;
+    }
+
+    /* à venir : aside */
+
+    .soon p {
+        font-size: 3.5rem;
+        max-width: 415px;
+    }
+
 }
 
 /** Mobile */
@@ -178,6 +259,17 @@
 
 /* Main mobile */
 
+    /* Gallery */
 
+    .gallery li {
+        width: 80%;
+    }
+
+    /* à venir : aside */
+
+    .soon p {
+        font-size: 2.5rem;
+        max-width: 300px;
+    }
 
 }

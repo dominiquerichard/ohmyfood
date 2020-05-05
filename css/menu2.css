@@ -5,7 +5,7 @@ main {
     color: rgb(0,0,0);
     background-color: rgb(255,245,254);
     /* Centrage */
-    margin: 100 auto 0;
+    margin: 0 auto 0;
     text-align: center;
     /* Ombrage */
     box-shadow: 0 0 25px 5px rgb(224,224,224);
@@ -14,21 +14,31 @@ main {
 /* Grand titre */
 
 .nom_restaurant h1 {
+    font-family: 'robotoregular';
+    font-size: 5.6rem;
+    font-weight: bold;
+    color: rgb(53,53,53);
+    background-color: rgb(255,255,255);
+    text-align: center;
+    margin: 80px 0 20px;
+}
+
+.nom_restaurant h2 {
     font-family: 'croissantone';
     font-size: 6rem;
-    padding-top: 175px;
     font-weight: normal;
     background-image: linear-gradient(to right, #df871e, #8f5bfe);
     background-clip: text;
     -webkit-background-clip: text; 
     color: transparent;
+    padding-top: 175px;
+    margin-top: 40px;
 }
 
 /* Sous-titres */
 
 .entree_titre,.plats_titre,.dessert_titre {
-    padding-left: 11%;
-    padding-right: 11%;
+    padding: 0 3%;
 }
 
 .entree_titre {
@@ -44,7 +54,6 @@ main {
 }
 
 .entree_titre h1, .plats_titre h1, .dessert_titre h1 {
-    position: relative;
     font-family: 'kameron';
     font-weight: bold;
     font-size: 3.2rem;
@@ -52,75 +61,91 @@ main {
 }
 
 .entree_titre h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 155px 0 55px;
 }
 
 .plats_titre h1 {
-    margin: 100px 0 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 90px 0 50px;
 }
 
 .dessert_titre h1 {
-    margin: 87px 0 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 90px 0 55px;
 }
 
 .entree_titre h1::before {
-    content: url(../images/trait-2.png);
-    position: absolute;
-    top: 5px;
-    left: -10%;
+    content: "";
+    display: inline-block;
+    width: 346px;
+    height: 25px;
+    background-image: url(../images/trait-2.png);
+    background-position: center;
+    background-size: 100%;
     background-color: rgb(198,116,18);
 }
 
 .plats_titre h1::before {
-    content: url(../images/trait-2.png);
-    position: absolute;
-    top: 5px;
-    left: -10%;
+    content: "";
+    display: inline-block;
+    width: 346px;
+    height: 25px;
+    background-image: url(../images/trait-2.png);
+    background-size: 100%;
+    background-position: center;
     background-color: rgb(165,103,153);
 }
 
 .dessert_titre h1::before {
-    content: url(../images/trait-2.png);
-    position: absolute;
-    top: 5px;
-    left: -10%;
+    content: "";
+    display: inline-block;
+    width: 346px;
+    height: 25px;
+    background-image: url(../images/trait-2.png);
+    background-size: 100%;
+    background-position: center;
     background-color: rgb(110,76,204);
 }
 
 .entree_titre h1::after {
-    content: url(../images/trait-2.png);
-    position: absolute;
-    top: 5px;
-    right: -10%;
+    content: "";
+    display: inline-block;
+    width: 346px;
+    height: 25px;
+    background-image: url(../images/trait-2-2.png);
+    background-size: 100%;
+    background-position: center;
     background-color: rgb(198,116,18);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+    
 }
 
 .plats_titre h1::after {
-    content: url(../images/trait-2.png);
-    position: absolute;
-    top: 5px;
-    right: -10%;
+    content: "";
+    display: inline-block;
+    width: 346px;
+    height: 25px;
+    background-image: url(../images/trait-2-2.png);
+    background-position: center;
+    background-size: 100%;
     background-color: rgb(165,103,153);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 .dessert_titre h1::after {
-    content: url(../images/trait-2.png);
-    position: absolute;
-    top: 5px;
-    right: -10%;
+    content: "";
+    display: inline-block;
+    width: 346px;
+    height: 21px;
+    background-image: url(../images/trait-2-2.png);
+    background-size: 100%;
+    background-position: center;
     background-color: rgb(110,76,204);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 /*  Spécialités au choix et prix */
@@ -130,9 +155,11 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     font-family: 'kameron';
-    font-size: 2.9rem;
+    font-size: 2.7rem;
     font-weight: normal;
+    padding: 0 9% 0 12%;
 }
 
 /* Formatage du flex */
@@ -147,21 +174,30 @@ section ul li { /*réglage de l'interligne*/
     margin-bottom: 25px;
 }
 
+section ul > li {
+    text-align: left;
+    flex-basis: 87.5%;
+}
+
 /* Prix */
 
 .prix {
+    flex-basis: 12.5%;
     font-family: 'kameron';
     font-weight: normal;
     font-size: 3.3rem;
 }
 
-/* Bas de page */
-
-.bas_de_page {
-    padding-bottom: 250px;
-    margin-bottom: 200px;
+.prix p {
+    margin-left: 15px;
 }
 
+/* Bas de page */
+
+.main_page {
+    padding-bottom: 250px;
+    margin-bottom: 270px;
+}
 
 /** Media queries */
 /** Tablette */

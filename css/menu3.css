@@ -2,36 +2,44 @@
 
 main {
     max-width: 1190px;
+    width: 100%;
     color: rgb(0,0,0);
     background-color: rgb(237,239,239);
     /* Centrage */
-    margin: 100 auto 0;
+    margin: 0 auto 0;
     text-align: center;
     /* Ombrage */
     box-shadow: 0 0 25px 5px rgb(224,224,224);
 }
 
-main header > h1 {
-    padding-top: 160px;
-}
-
 /* Grand titre */
 
 .nom_restaurant h1 {
+    font-family: 'robotoregular';
+    font-size: 5.6rem;
+    font-weight: bold;
+    color: rgb(53,53,53);
+    background-color: rgb(255,255,255);
+    text-align: center;
+    margin: 80px 0 0;
+}
+
+.nom_restaurant h2 {
     font-family: 'dancing';
-    font-size: 10rem;
+    font-size: 11rem;
     font-weight: normal;
-    background-image: linear-gradient(135deg, rgb(0,34,219), rgb(8,137,251));
+    background-image: linear-gradient(135deg, rgb(0,34,219), rgb(0,34,219), rgb(8,137,251), rgb(8,137,251));
     background-clip: text;
     -webkit-background-clip: text; 
     color: transparent;
+    padding-top: 160px;
+    margin-top: 40px;
 }
 
 /* Sous-titres */
 
 .entree_titre,.plats_titre,.dessert_titre {
-    padding-left: 11%;
-    padding-right: 11%;
+    padding: 0 3%;
 }
 
 .entree_titre {
@@ -47,94 +55,109 @@ main header > h1 {
 }
 
 .entree_titre h1, .plats_titre h1, .dessert_titre h1 {
-    position: relative;
     font-family: 'worstveldsling';
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 .entree_titre h1 {
-    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 130px 0 40px;
 }
 
 .plats_titre h1 {
-    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 0 40px;
 }
 
 .dessert_titre h1 {
-    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 55px 0 40px;
 }
 
 .entree_titre h1::before {
-    content: url(../images/trait-3.png);
-    position: absolute;
-    top: 5px;
-    left: -10%;
+    content: "";
+    display: inline-block;
+    width: 409px;
+    height: 30px;
+    background-image: url(../images/trait-3.png);
+    background-position: center;
+    background-size: 100%;
     background-color: rgb(2,40,221);
 }
 
 .plats_titre h1::before {
-    content: url(../images/trait-3.png);
-    position: absolute;
-    top: 5px;
-    left: -10%;
+    content: "";
+    display: inline-block;
+    width: 409px;
+    height: 30px;
+    background-image: url(../images/trait-3.png);
+    background-position: center;
+    background-size: 100%;
     background-color: rgb(6,112,243);
 }
 
 .dessert_titre h1::before {
-    content: url(../images/trait-3.png);
-    position: absolute;
-    top: 5px;
-    left: -10%;
+    content: "";
+    display: inline-block;
+    width: 409px;
+    height: 30px;
+    background-image: url(../images/trait-3.png);
+    background-position: center;
+    background-size: 100%;
     background-color: rgb(34,157,249);
 }
 
 .entree_titre h1::after {
-    content: url(../images/trait-3.png);
-    position: absolute;
-    top: 5px;
-    right: -10%;
+    content: "";
+    display: inline-block;
+    width: 409px;
+    height: 30px;
+    background-image: url(../images/trait-3-3.png);
+    background-position: center;
+    background-size: 100%;
     background-color: rgb(2,40,221);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 .plats_titre h1::after {
-    content: url(../images/trait-3.png);
-    position: absolute;
-    top: 5px;
-    right: -10%;
+    content: "";
+    display: inline-block;
+    width: 409px;
+    height: 30px;
+    background-image: url(../images/trait-3-3.png);
+    background-position: center;
+    background-size: 100%;
     background-color: rgb(6,112,243);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 .dessert_titre h1::after {
-    content: url(../images/trait-3.png);
-    position: absolute;
-    top: 5px;
-    right: -10%;
+   content: "";
+    display: inline-block;
+    width: 409px;
+    height: 30px;
+    background-image: url(../images/trait-3-3.png);
+    background-position: center;
+    background-size: 100%;
     background-color: rgb(34,157,249);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 /*  Spécialités au choix et prix */
 
 .entree_choix ul ,.plats_choix ul, .dessert_choix ul {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-     font-family: 'worstveldsling';
-    font-size: 4rem;
+    align-items: center;
+    font-family: 'worstveldsling';
+    font-size: 3.8rem;
     font-weight: bold;
+    padding: 0 10% 0 13%;
 }
 
 /* Formatage du flex */
@@ -149,24 +172,30 @@ section ul li { /*réglage de l'interligne*/
     margin-bottom: 10px;
 }
 
+section ul > li {
+    text-align: left;
+    flex-basis: 87%;
+}
+
 /* Prix */
 
 .prix {
+    flex-basis: 13%;
     font-family: 'worstveldsling';
     font-weight: bold;
     font-size: 4.1rem;
 }
 
+.prix p {
+    margin-left: 15px;
+}
+
 /* Bas de page */
 
 .main_page {
-    margin-bottom: 200px;
-}
-
-.bas_de_page {
     padding-bottom: 300px;
+    margin-bottom: 270px;
 }
-
 
 /** Media queries */
 /** Tablette */
