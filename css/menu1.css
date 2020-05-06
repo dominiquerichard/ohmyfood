@@ -6,7 +6,7 @@ main {
     color: rgb(61,19,25);
     background-color: rgb(252,223,219);
     /* Centrage */
-    margin: 0 auto 0;
+    margin: 0 10.33% 0;
     padding: 0;
     text-align: center;
     /* Ombrage */
@@ -97,11 +97,18 @@ main {
 
 /*  Spécialités au choix et prix */
 
-.entree_choix ul ,.plats_choix ul, .dessert_choix ul {
+.entree_choix ul ,.plats_choix ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    font-family: 'KGPrimary';
+    font-weight: normal;
+    font-size: 3.3rem;
+    padding: 0 0% 0 0%;
+}
+
+.dessert_choix ul { /* sans flex car sans prix */
     font-family: 'KGPrimary';
     font-weight: normal;
     font-size: 3.3rem;
@@ -122,14 +129,14 @@ section ul li { /*réglage de l'interligne*/
 
 section ul > li {
     text-align: left;
-    flex-basis: 90%;
+    flex-basis: 88.5%;
 }
 
 
 /* Prix */
 
 .prix {
-    flex-basis: 10%;
+    flex-basis: 11.5%;
 	font-family: KGPrimary;
     text-align: right;
     font-weight: bold;
@@ -140,11 +147,16 @@ section ul > li {
     margin-left: 15px;
 }
 
+.sans_prix p:empty {
+    display: none;
+}
+
 /* Footer */
 
 main footer {
     display: inline-flex;
     justify-content: center;
+    align-items: center;
     padding: 80px 0 80px;
 }
 
@@ -174,6 +186,84 @@ main footer p {
 @media (max-width: 1024px) {
 
     /* Main Tablette */
+    /* Coef (1024/1190)=0.86% */
+
+    /* Grand titre */
+
+    .nom_restaurant h1 {
+        font-size: 3.8rem;
+        margin: 54px 0 14px;
+    }
+
+    .nom_restaurant i {
+        font-size: 11rem;
+        padding-top: 69px;
+    }
+
+    .nom_restaurant h2 {
+        font-size: 6.5rem;
+    }
+
+    /* Sous-titres */
+
+    .entree_titre,.plats_titre,.dessert_titre {
+        padding: 0 5%;
+    }
+
+    .entree_titre h1, .plats_titre h1, .dessert_titre h1 {
+        font-size: 4.3rem;
+    }
+
+    .entree_titre h1 {
+        margin: 52px 10px 30px;
+    }
+
+    .plats_titre h1 {
+        margin: 55px 0 30px;
+    }
+
+    .dessert_titre h1 {
+        margin: 73px 0 30px;
+    }
+
+    .entree_titre h1::before {
+        width: 180px;
+    }
+
+    .entree_titre h1::after {
+        width: 180px;
+    }
+
+    /*  Spécialités au choix et prix */
+
+    .entree_choix ul ,.plats_choix ul, .dessert_choix ul {
+        font-size: 2.8rem;
+    }
+
+    section ul > li {
+        flex-basis: 85%;
+    }
+
+    /* Prix */
+
+    .prix {
+        flex-basis: 15%;
+        font-size: 2.6rem;
+    }
+
+    /* Footer */
+
+    main footer {
+        padding: 69px 0 69px;
+    }
+
+    footer i {
+        font-size: 6.4rem;
+    }
+
+    main footer p {
+        font-size: 4.6rem;
+    }
 
 }
 
@@ -183,6 +273,59 @@ main footer p {
 
 /* Main mobile */
 
+    /* Grand titre */
 
+    .nom_restaurant h1 {
+        font-size: 3rem;
+    }
+
+    .nom_restaurant i {
+        font-size: 5.5rem;
+        padding-top: 69px;
+    }
+
+    .nom_restaurant h2 {
+        font-size: 3.3rem;
+    }
+
+    /* Sous-titres */
+
+
+    .entree_titre h1 {
+        align-items: flex-end;
+    }
+    
+    .entree_choix ul ,.plats_choix ul, .dessert_choix ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .entree_choix ul p ,.plats_choix ul p, .dessert_choix ul p {
+        text-align: center;
+    }
+
+    section ul > li {
+        flex-basis: auto;
+    }
+
+    /* Prix */
+
+    .prix {
+        flex-basis: auto;
+    }
+
+    /* Footer */
+
+    footer i {
+        font-size: 4.1rem;
+        padding: 0 10px 0 0;
+        margin-left: 20px;
+    }
+
+    main footer p {
+        font-size: 3rem;
+    }
 
 }

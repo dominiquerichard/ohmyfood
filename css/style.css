@@ -72,8 +72,7 @@ main {
     font-weight: normal;
     font-size: 7.5rem;
     color: rgb(61,19,25);
-    margin-top: 40px;
-    padding-bottom: 190px;
+    margin: 40px 0 245px;
 }
 
 /* Menu 2 ************/
@@ -100,7 +99,7 @@ main {
     font-size: 7rem;
     color: rgb(198,116,18);
     margin-top: 30px;
-    padding-bottom: 190px;
+    padding-bottom: 240px;
 }
 
 /* Menu 3 ************/
@@ -117,7 +116,7 @@ main {
     background-clip: text;
     -webkit-background-clip: text; 
     color: transparent;
-    padding: 270px 0 0;
+    margin: 270px 0 0;
 }
 
 #menu3 h2 {
@@ -126,8 +125,7 @@ main {
     font-weight: bold;
     font-size: 8rem;
     color: rgb(8,137,251);
-    margin-top: 50px;
-    padding-bottom: 210px;
+    margin: 50px 0 280px;
 }
 
 /* Menu 4 ************/
@@ -144,7 +142,7 @@ main {
     background-clip: text;
     -webkit-background-clip: text; 
     color: transparent;
-    padding: 290px 0 0;
+    margin: 280px 0 0;
 }
 
 #menu4 h2 {
@@ -153,8 +151,7 @@ main {
     font-weight: normal;
     font-size: 5.5rem;
     color: rgb(61,146,58);
-    margin-top: 35px;
-    padding-bottom: 210px;
+    margin: 35px 0 280px;
 }
 
 /* à venir : aside */
@@ -181,75 +178,83 @@ main {
 /** Media queries */
 /** Tablette */
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) { /* Coef (1024/1190=0.86%) */
 
     /* Main Tablette */
+
+    main {
+        padding: 0 4.8%;
+    }
 
     /* Gallery */
 
     .gallery li {
-        width: 40%;
+        max-width: 527px;
+        width: 100%;
     }
 
     /* Menu 1 ************/
 
-    #menu1 h1 {
-        font-size: 2rem;
+    #menu1 i {
+        font-size: 6.9rem;
+        margin-top: 219px;
     }
 
-    #menu1 i {
-        font-size: 3.2rem;
-        padding-top: 155px;
+    #menu1 h1 {
+        font-size: 4.3rem;
     }
 
     #menu1 h2 {
-        font-size: 3rem;
-        padding-bottom: 170px;
+        font-size: 6.4rem;
+        margin: 34px 0 211px;
     }
 
     /* Menu 2 ************/
 
     #menu2 h1 {
-        font-size: 1.4rem;
-        margin: 200px 0 0;
+        font-size: 3rem;
+        margin: 258px 0 0;
     }
 
     #menu2 h2 {
-        font-size: 2.8rem;
-        padding-bottom: 170px;
+        font-size: 6rem;
+        margin-top: 26px;
+        padding-bottom: 206px;
     }
 
     /* Menu 3 ************/
 
     #menu3 h1 {
-        font-size: 2.2rem;
-        padding: 165px 0 0;
+        font-size: 4.7rem;
+        margin: 232px 0 0;
 
     }
 
     #menu3 h2 {
-        font-size: 3.2rem;
-        padding-bottom: 190px;
+        font-size: 6.9rem;
+        margin: 43px 0 241px;
     }
 
     /* Menu 4 ************/
 
     #menu4 h1 {
-        font-size: 2rem;
-        padding: 175px 0 0;
+        font-size: 4.3rem;
+        margin: 241px 0 0;
     }
 
     #menu4 h2 {
-        font-size: 2.2rem;
-        padding-bottom: 180px;
+        font-size: 4.7rem;
+        margin: 30px 0 241px;
     }
 
     /* à venir : aside */
 
     .soon p {
-        font-size: 3.5rem;
-        max-width: 415px;
-    }
+        max-width: 563px;
+        font-size: 4.7rem;
+        padding: 21px 0;
+        margin: 82px auto 192px;
+        }
 
 }
 
@@ -257,19 +262,67 @@ main {
 
 @media (max-width: 700px) {
 
-/* Main mobile */
+    /* Main mobile */
+
+    main {
+        padding: 0 3.2%;
+    }
 
     /* Gallery */
 
     .gallery li {
-        width: 80%;
+        max-width: 450px;
+        width: 100%;
+    }
+
+    /* Menu 1 ************/
+
+    #menu1 i {
+        margin-top: 117px;
+    }
+
+    #menu1 h2 {
+        margin: 27px 0 112px;
+    }
+
+    /* Menu 2 ************/
+
+    #menu2 h1 {
+        margin: 138px 0 0;
+    }
+
+    #menu2 h2 {
+        padding-bottom: 110px;
+    }
+
+    /* Menu 3 ************/
+
+    #menu3 h1 {
+        margin: 124px 0 0;
+
+    }
+
+    #menu3 h2 {
+        margin: 34px 0 129px;
+    }
+
+    /* Menu 4 ************/
+
+    #menu4 h1 {
+        margin: 129px 0 0;
+    }
+
+    #menu4 h2 {
+        margin: 24px 0 129px;
     }
 
     /* à venir : aside */
 
     .soon p {
-        font-size: 2.5rem;
-        max-width: 300px;
+        max-width: 301px;
+        font-size: 2.53rem;
+        padding: 12px 0;
+        margin: 44px auto 143px;
     }
 
 }

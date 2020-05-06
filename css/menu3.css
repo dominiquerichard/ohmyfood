@@ -2,11 +2,10 @@
 
 main {
     max-width: 1190px;
-    width: 100%;
     color: rgb(0,0,0);
     background-color: rgb(237,239,239);
     /* Centrage */
-    margin: 0 auto 0;
+    margin: 0 10.33% 0;
     text-align: center;
     /* Ombrage */
     box-shadow: 0 0 25px 5px rgb(224,224,224);
@@ -174,16 +173,16 @@ section ul li { /*réglage de l'interligne*/
 
 section ul > li {
     text-align: left;
-    flex-basis: 87%;
+    flex-basis: 84%;
 }
 
 /* Prix */
 
 .prix {
-    flex-basis: 13%;
+    flex-basis: 16%;
     font-family: 'worstveldsling';
     font-weight: bold;
-    font-size: 4.1rem;
+    font-size: 4rem;
 }
 
 .prix p {
@@ -203,6 +202,61 @@ section ul > li {
 @media (max-width: 1024px) {
 
     /* Main Tablette */
+    /* Coef (1024/1190)=0.86% */
+
+    /* Grand titre */
+
+    .nom_restaurant h1 {
+        font-size: 3.8rem;
+        margin: 54px 0 14px;
+    }
+
+    .nom_restaurant h2 {
+    font-size: 9.4rem;
+    padding-top: 137px;
+    margin-top: 34px;
+    }
+
+    /* Sous-titres */
+
+    .entree_titre,.plats_titre,.dessert_titre {
+        padding: 0 5%;
+    }
+
+    .entree_titre h1, .plats_titre h1, .dessert_titre h1 {
+        font-family: 'worstveldsling';
+        font-weight: bold;
+        font-size: 3.8rem;
+    }
+
+    .entree_titre h1 {
+        margin: 112px 0 34px;
+    }
+
+    .plats_titre h1 {
+        margin: 60px 0 34px;
+    }
+
+    .dessert_titre h1 {
+        margin: 47px 0 34px;
+    }
+
+    /*  Spécialités au choix */
+
+    .entree_choix ul ,.plats_choix ul, .dessert_choix ul {
+        font-size: 3.2rem;
+    }
+
+    section ul > li {
+        flex-basis: 77%;
+    }
+
+    /* Prix */
+
+    .prix {
+        flex-basis: 23%;
+        font-size: 3.3rem;
+    }
 
 }
 
@@ -210,6 +264,50 @@ section ul > li {
 
 @media (max-width: 700px) {
 
-/* Main mobile */
+    /* Main mobile */
 
+    /* Grand titre */
+
+    .nom_restaurant h1 {
+        font-size: 3rem;
+    }
+
+    .nom_restaurant h2 {
+    font-size: 4.7rem;
+    }
+
+    /* Sous-titres */
+
+
+    .entree_titre h1::before, .plats_titre h1::before, .dessert_titre h1::before {
+        height: 18px;
+    }
+
+    .entree_titre h1::after, .plats_titre h1::after, .dessert_titre h1::after {
+        height: 18px;
+    }
+
+    /*  Spécialités au choix et prix */
+
+    .entree_choix ul ,.plats_choix ul, .dessert_choix ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .entree_choix ul p ,.plats_choix ul p, .dessert_choix ul p {
+        text-align: center;
+    }
+
+    section ul > li {
+        flex-basis: auto;
+    }
+
+    /* Prix */
+
+    .prix {
+        flex-basis: auto;
+    }
+    
 }
