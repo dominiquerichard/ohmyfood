@@ -13,7 +13,7 @@ main {
 
 /* Grand titre */
 
-.nom_restaurant h1 {
+aside.nom_restaurant h2 {
     font-family: 'robotoregular';
     font-size: 5.6rem;
     font-weight: bold;
@@ -23,13 +23,13 @@ main {
     margin: 80px 0 20px;
 }
 
-.nom_restaurant h2 {
+header.nom_restaurant h1 {
     font-family: 'croissantone';
     font-size: 6rem;
     font-weight: normal;
     background-image: linear-gradient(to right, #df871e, #8f5bfe);
-    background-clip: text;
     -webkit-background-clip: text; 
+    background-clip: text;
     color: transparent;
     padding-top: 175px;
     margin-top: 40px;
@@ -53,35 +53,30 @@ main {
     color: rgb(110,76,204);
 }
 
-.entree_titre h1, .plats_titre h1, .dessert_titre h1 {
+.entree_titre h2, .plats_titre h2, .dessert_titre h2 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-family: 'kameron';
     font-weight: bold;
     font-size: 3.2rem;
     margin-top: 150px;
 }
 
-.entree_titre h1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.entree_titre h2 {
     margin: 155px 0 55px;
 }
 
-.plats_titre h1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.plats_titre h2 {
     margin: 90px 0 50px;
 }
 
-.dessert_titre h1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.dessert_titre h2 {
     margin: 90px 0 55px;
 }
 
-.entree_titre h1::before {
+.entree_titre h2::before {
     content: "";
     display: inline-block;
     width: 346px;
@@ -92,7 +87,7 @@ main {
     background-color: rgb(198,116,18);
 }
 
-.plats_titre h1::before {
+.plats_titre h2::before {
     content: "";
     display: inline-block;
     width: 346px;
@@ -103,7 +98,7 @@ main {
     background-color: rgb(165,103,153);
 }
 
-.dessert_titre h1::before {
+.dessert_titre h2::before {
     content: "";
     display: inline-block;
     width: 346px;
@@ -114,7 +109,7 @@ main {
     background-color: rgb(110,76,204);
 }
 
-.entree_titre h1::after {
+.entree_titre h2::after {
     content: "";
     display: inline-block;
     width: 346px;
@@ -126,7 +121,7 @@ main {
     
 }
 
-.plats_titre h1::after {
+.plats_titre h2::after {
     content: "";
     display: inline-block;
     width: 346px;
@@ -137,7 +132,7 @@ main {
     background-color: rgb(165,103,153);
 }
 
-.dessert_titre h1::after {
+.dessert_titre h2::after {
     content: "";
     display: inline-block;
     width: 346px;
@@ -146,6 +141,28 @@ main {
     background-size: 100%;
     background-position: center;
     background-color: rgb(110,76,204);
+}
+
+/* Animation des sous-titres (entree plats dessert) */
+
+.entree_titre h2 .animation_titre, .plats_titre h2 .animation_titre, .dessert_titre h2 .animation_titre {
+    position: absolute;
+    bottom: -6px;
+    height: auto;
+    left: 35%;
+    width: 29.3%;
+    border-bottom: 4px solid var(--couleurTheme2);
+    transform-origin: left;
+    transform: scaleX(0);
+    -webkit-transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+    -moz-transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+    -ms-transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+    -o-transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+    transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+}
+
+.entree_titre h2:hover .animation_titre, .plats_titre h2:hover .animation_titre, .dessert_titre h2:hover .animation_titre {
+    transform: scaleX(1);
 }
 
 /*  Spécialités au choix et prix */
@@ -173,7 +190,12 @@ main {
 
 /* Formatage du flex */
 
-ul, li, p {
+article h3 {
+    font-size: 2.7rem;
+    font-weight: normal;
+}
+
+ article ul, li, p, h3 {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -222,12 +244,12 @@ section ul > li {
 
     /* Grand titre */
 
-    .nom_restaurant h1 {
+    aside.nom_restaurant h2 {
         font-size: 3.8rem;
         margin: 54px 0 14px;
     }
 
-    .nom_restaurant h2 {
+    header.nom_restaurant h1 {
         font-size: 4.5rem;
         padding-top: 129px;
         margin-top: 29px;
@@ -239,28 +261,28 @@ section ul > li {
         padding: 0 5%;
     }
 
-    .entree_titre h1, .plats_titre h1, .dessert_titre h1 {
+    .entree_titre h2, .plats_titre h2, .dessert_titre h2 {
         font-size: 2.7rem;
         margin-top: 129px;
     }
 
-    .entree_titre h1 {
+    .entree_titre h2 {
         margin: 133px 0 47px;
     }
 
-    .plats_titre h1 {
+    .plats_titre h2 {
         margin: 77px 0 43px;
     }
 
-    .dessert_titre h1 {
+    .dessert_titre h2 {
         margin: 77px 0 47px;
     }
 
-    .dessert_titre h1::before {
+    .dessert_titre h2::before {
         width: 280px;
     }
 
-    .dessert_titre h1::after {
+    .dessert_titre h2::after {
         width: 280px;
     }
 
@@ -291,29 +313,29 @@ section ul > li {
 
     /* Grand titre */
 
-    .nom_restaurant h1 {
+    aside.nom_restaurant h2 {
         font-size: 3rem;
     }
 
-    .nom_restaurant h2 {
+    header.nom_restaurant h1 {
         font-size: 3rem;
     }
 
     /* Sous-titres */
 
-    .entree_titre h1::before, .plats_titre h1::before {
+    .entree_titre h2::before, .plats_titre h2::before {
         height: 15px;
     }
 
-    .dessert_titre h1::before {
+    .dessert_titre h2::before {
         height: 5px;
     }
 
-    .entree_titre h1::after, .plats_titre h1::after {
+    .entree_titre h2::after, .plats_titre h2::after {
         height: 15px;
     }
 
-    .dessert_titre h1::after {
+    .dessert_titre h2::after {
         height: 5px;
     }
 
@@ -326,7 +348,7 @@ section ul > li {
         align-items: center;
     }
 
-    .entree_choix ul p ,.plats_choix ul p, .dessert_choix ul p {
+    .entree_choix ul h3 , .plats_choix ul h3, .dessert_choix ul h3 {
         text-align: center;
     }
 
@@ -338,6 +360,10 @@ section ul > li {
 
     .prix {
         flex-basis: auto;
+    }
+
+    .prix p {
+        margin: 0 0 45px 0;
     }
     
 }
