@@ -207,6 +207,7 @@ section ul > li {
     }
 
     .entree_titre h2 {
+        align-items: flex-end;
         margin: 107px 0 43px;
         line-height: 2;
     }
@@ -216,9 +217,6 @@ section ul > li {
     }
 
     .dessert_titre h2 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
         margin: 43px 0 43px;
     }
 
@@ -270,9 +268,9 @@ section ul > li {
 
     /* Sous-titres */
 
-    .entree_titre h2 {
+    .entree_titre h2, .plats_choix h2, .dessert_choix h2 {
         align-items: flex-end;
-        line-height: 2;
+        line-height: 6rem;
     }
 
     /*  Spécialités au choix et prix */

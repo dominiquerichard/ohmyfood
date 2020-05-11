@@ -132,6 +132,11 @@ footer ul {
 
 footer li {
     list-style-type: none;
+    -webkit-transition: transform 300ms linear;
+    -moz-transition: transform 300ms linear;
+    -ms-transition: transform 300ms linear;
+    -o-transition: transform 300ms linear;
+    transition: transform 300ms linear;
 }
 
 footer a {
@@ -142,6 +147,23 @@ footer a {
     font-weight: normal;
     padding: 30px 40px;
 }
+
+/* animation liens footer au survol */
+
+@keyframes wiggle {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translate(-1px,1px) rotate(1deg);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate(1px,-1px) rotate(-1deg);
+    }
+}
+
+footer li:hover {
+    animation: wiggle 1500ms 200ms ease-in-out infinite alternate;
+}
+
 /** Media queries */
 /** Tablette */
 

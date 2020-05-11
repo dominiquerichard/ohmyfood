@@ -50,20 +50,21 @@ main {
 #menu1 {
     background-color: rgb(252,223,219);
 }
-
-#menu1 i {
-    font-size: 8rem;
-    color: rgb(240,88,97);
-    margin-top: 255px;
-}
-
 #menu1 h1 {
+    position: relative;
     font-family: 'devonshire';
     font-weight: normal;
     font-size: 5rem;
     color: rgb(61,19,25);
-    line-height: 6rem;
-    margin: 0;
+    margin-top: 324px;
+}
+
+#menu1 i {
+    position: absolute;
+    top: -70px;
+    left: 44%;
+    font-size: 8rem;
+    color: rgb(240,88,97);
 }
 
 #menu1 h2 {
@@ -72,7 +73,7 @@ main {
     font-weight: normal;
     font-size: 7.5rem;
     color: rgb(61,19,25);
-    margin: 40px 0 245px;
+    margin: 40px 0 244px;
 }
 
 /* Menu 2 ************/
@@ -89,7 +90,7 @@ main {
     -webkit-background-clip: text;
     background-clip: text; 
     color: transparent;
-    margin: 300px 0 0;
+    margin: 320px 0 0;
 }
 
 #menu2 h2 {
@@ -99,7 +100,7 @@ main {
     font-size: 7rem;
     color: rgb(198,116,18);
     margin-top: 30px;
-    padding-bottom: 240px;
+    margin: 30px 0 273px;
 }
 
 /* Menu 3 ************/
@@ -125,7 +126,7 @@ main {
     font-weight: bold;
     font-size: 8rem;
     color: rgb(8,137,251);
-    margin: 50px 0 280px;
+    margin: 50px 0 281px;
 }
 
 /* Menu 4 ************/
@@ -142,7 +143,7 @@ main {
     -webkit-background-clip: text; 
     background-clip: text;
     color: transparent;
-    margin: 280px 0 0;
+    margin: 290px 0 0;
 }
 
 #menu4 h2 {
@@ -175,6 +176,32 @@ main {
     color: var(--couleurTheme2);
 }
 
+/* animation  des points de suspension */
+
+@keyframes point_suspendu {
+    to {
+        transform: translateY(-3px);
+    }
+}
+
+.soon i {
+    font-size: 0.8rem;
+    color: var(--couleurTheme2);
+    animation: point_suspendu 500ms ease-in-out infinite alternate;
+}
+
+.soon i:nth-child(2) {
+    animation-delay: 500ms;
+}
+
+.soon i:nth-child(3) {
+    animation-delay: 250ms;
+}
+
+.soon i:nth-child(4) {
+    animation-delay: 0ms;
+}
+
 /** Media queries */
 /** Tablette */
 
@@ -189,19 +216,19 @@ main {
     /* Gallery */
 
     .gallery li {
-        max-width: 527px;
+        max-width: 464px;
         width: 100%;
     }
 
     /* Menu 1 ************/
 
-    #menu1 i {
-        font-size: 6.9rem;
-        margin-top: 219px;
-    }
-
     #menu1 h1 {
         font-size: 4.3rem;
+         margin-top: 279px;
+    }
+
+    #menu1 i {
+        font-size: 6.9rem;
     }
 
     #menu1 h2 {
@@ -213,21 +240,19 @@ main {
 
     #menu2 h1 {
         font-size: 3rem;
-        margin: 258px 0 0;
+        margin: 278px 0 0;
     }
 
     #menu2 h2 {
         font-size: 6rem;
-        margin-top: 26px;
-        padding-bottom: 206px;
+        margin: 26px 0 233px;
     }
 
     /* Menu 3 ************/
 
     #menu3 h1 {
         font-size: 4.7rem;
-        margin: 232px 0 0;
-
+        margin: 234px 0 0;
     }
 
     #menu3 h2 {
@@ -239,12 +264,12 @@ main {
 
     #menu4 h1 {
         font-size: 4.3rem;
-        margin: 241px 0 0;
+        margin: 249px 0 0;
     }
 
     #menu4 h2 {
         font-size: 4.7rem;
-        margin: 30px 0 241px;
+        margin: 30px 0 242px;
     }
 
     /* à venir : aside */
@@ -254,7 +279,11 @@ main {
         font-size: 4.7rem;
         padding: 21px 0;
         margin: 82px auto 192px;
-        }
+    }
+
+    .soon i {
+        font-size: 0.6rem;
+    }
 
 }
 
@@ -271,49 +300,61 @@ main {
     /* Gallery */
 
     .gallery li {
-        max-width: 450px;
+        max-width: 318px;
         width: 100%;
     }
 
     /* Menu 1 ************/
 
+    #menu1 h1 {
+        font-size: 2.9rem;
+        margin-top: 191px;
+    }
+
     #menu1 i {
-        margin-top: 117px;
+        font-size: 4.7rem;
     }
 
     #menu1 h2 {
-        margin: 27px 0 112px;
+        font-size: 4.4rem;
+        margin: 27px 0 144px;
     }
 
     /* Menu 2 ************/
 
     #menu2 h1 {
-        margin: 138px 0 0;
+        font-size: 2rem;
+        margin: 186px 0 0;
     }
 
     #menu2 h2 {
-        padding-bottom: 110px;
+        font-size: 4.1rem;
+        margin-bottom: 160px;
     }
 
     /* Menu 3 ************/
 
     #menu3 h1 {
-        margin: 124px 0 0;
+        font-size: 3.2rem;
+        margin: 159px 0 0;
 
     }
 
     #menu3 h2 {
-        margin: 34px 0 129px;
+        font-size: 4.7rem;
+        margin: 34px 0 165px;
     }
 
     /* Menu 4 ************/
 
     #menu4 h1 {
-        margin: 129px 0 0;
+        font-size: 2.9rem;
+        margin: 171px 0 0;
     }
 
     #menu4 h2 {
-        margin: 24px 0 129px;
+        font-size: 3.2rem;
+        margin: 24px 0 166px;
     }
 
     /* à venir : aside */
@@ -323,6 +364,10 @@ main {
         font-size: 2.53rem;
         padding: 12px 0;
         margin: 44px auto 143px;
+    }
+
+    .soon i {
+        font-size: 0.2pc;
     }
 
 }
